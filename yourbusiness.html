@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Early Access | Opay</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- header -->
+    <nav class="bg-white sticky top-0 px-4 sm:px-4 md:px-8 z-20">
+        <div class="mx-auto max-w-5xl">
+            <div class="relative flex h-20 lg:h-24 items-center justify-between">
+                <div class="absolute inset-y-0 left-0 flex items-center md:hidden">
+                    <!-- Mobile menu button-->
+                    <button type="button"
+                        onclick="toggleBtn()"
+                        class="inline-flex items-center justify-center rounded-md p-2 text-[#4A4A4A] hover:bg-[#E78200] hover:text-white focus:outline-none"
+                        aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                        <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-1 items-center justify-end md:items-stretch md:justify-between">
+
+                    <div class="h-10 w-24">
+                        <img src="assets/images/opay logo.jpeg" alt="logo">
+                    </div>
+                    <div class="hidden md:mr-8 md:block">
+                        <div class="flex space-x-6">
+
+                            <a href="index.html"
+                                class="text-[#E78200] hover:text-[#9bd1b5] px-3 py-2 rounded-md text-md font-thin tracking-wider">Home</a>
+
+                            <a href="getapp.html"
+                                class="text-[#E78200] hover:text-[#9bd1b5] px-3 py-2 rounded-md text-md font-thin tracking-wider">Get
+                                the App</a>
+
+                            <a href="yourbusiness.html"
+                                class="text-[#E78200] hover:text-[#9bd1b5] px-3 py-2 rounded-md text-md font-thin tracking-wider visited:text-[#9bd1b5]">Your
+                                Business</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden md:inline-block absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                    <button class="rounded-full h-10 w-36 transition-colors duration-900 transform bg-[#E78200] hover:bg-[#F0A33F] text-white text-md hover:text-sm">
+                        <a href="#footer-sec" class="">Contact us</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="hidden md:hidden border rounded-md absolute top-20 w-[90%] bg-white" id="mobile-menu">
+            <div class="space-y-1 px-2 pt-2 pb-3">
+
+                <a href="index.html" class="text-[#4A4A4A] hover:bg-[#E78200] hover:text-white block px-3 py-2 text-md font-thin tracking-wider rounded-md"
+                    aria-current="page">Home</a>
+
+                <a href="getapp.html"
+                    class="text-[#4A4A4A] hover:bg-[#E78200] hover:text-white block px-3 py-2 text-md font-thin tracking-wider rounded-md">Get
+                    the App</a>
+
+                <a href="yourbusiness.html"
+                    class="bg-[#E78200] text-white block px-3 py-2 text-md font-thin tracking-wider rounded-md">Your
+                    Business
+                </a>
+                <button class="rounded-full h-10 w-36 transition-colors duration-900 transform bg-[#E78200] hover:bg-[#F0A33F] text-white text-md hover:text-sm">
+                    <a href="#footer-sec" class="" onclick="disappear()">Contact us</a>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <Section class="relative px-6 sm:px-4 md:px-8">
+        <div class="max-w-5xl flex mx-auto justify-center py-10 lg:py-20">
+            <div class="flex flex-col justify-center text-center space-y-2">
+                <p class="text-[35px] font-bold text-[#E78200] pb-4">Grow Your <span class="text-[#4A4A4A]">Business</span> With <span class="text-[#4A4A4A]">Opay!</span></p>
+                <p class="text-[16px] text-[#4A4A4A] leading-6 font-medium text-[18px]">Stop burdening your business with high transaction costs.</p>
+                <p class="text-[16px] text-[#4A4A4A] leading-6 font-medium text-[18px]">Look for more ways to take payments and pay for overhead costs.</p>
+                <p class="text-[16px] text-[#4A4A4A] leading-6 font-medium text-[18px]">Handle all your business’ financials from a singular location at a fraction of the cost.</p>
+            </div>
+        </div>
+    </Section>
+
+    <!-- Payment Recieved section -->
+    <Section class="px-6 sm:px-6 md:px-8">
+        <div class="max-w-sm lg:max-w-5xl mx-auto grid grid-cols-6 lg:h-[600px] py-20 space-y-10 items-center">
+            <div class="h-[400px] col-span-6 lg:col-span-4 my-auto mx-auto lg:mx-0">
+                <img src="assets/images/b1.png" alt="" class="h-full">
+            </div>
+            <div class="col-span-6 lg:col-span-2 my-auto">
+                <div class="flex flex-col justify-center leading-10 max-w-sm md:max-w-md lg:max-w-auto mx-auto lg:mx-0">
+                    <p class="text-[35px] font-bold text-[#E78200]">Receive Payments <br> <span class="text-[#4A4A4A]">Instantly</span></p>
+                    <p class="py-6 text-[16px] leading-6 text-[#4A4A4A]">Going cashless has become more simple and less daunting with the Opay app. You can receive payments instantly from your customers with a minimal transaction fee. The best part is your customers automatically receive receipts for all their transactions directly through the app.</p>
+                </div>
+            </div>
+        </div>
+    </Section>
+
+    <!-- cost and foot section -->
+    <Section class="bg-i px-6 sm:px-6 md:px-8">
+        <div class="max-w-sm lg:max-w-5xl mx-auto grid grid-cols-6 lg:h-[600px] py-20 space-y-10 items-center">
+            <div class="col-span-6 lg:col-span-2 my-auto">
+                <div class="flex flex-col justify-center leading-10">
+                    <p class="text-[35px] font-bold text-[#E78200]">Cost and <span class="text-[#4A4A4A]">Foot</span> <br> <span class="text-[#4A4A4A]">Traffic</span> Analysis </p>
+                    <p class="py-6 text-[16px] leading-6 text-[#4A4A4A]">Effectively inform your business decisions with our cost and foot traffic analysis. Our Opay business app will help you understand how customers are spending money and help you make the best decisions to improve your business.</p>
+                </div>
+            </div>
+            <div class="h-[400px] col-span-6 lg:col-span-4 my-auto ml-auto">
+                <img src="assets/images/b2.png" alt="" class="h-full">
+            </div>
+        </div>
+    </Section>
+
+    <!-- Get the app section -->
+    <Section class="px-6 sm:px-6 md:px-8">
+        <div class="max-w-sm lg:max-w-5xl mx-auto grid grid-cols-6 lg:h-[600px] py-20 space-y-10 items-center">
+            <div class="h-[400px] col-span-6 lg:col-span-4 my-auto mx-auto lg:mx-0">
+                <img src="assets/images/b3.png" alt="" class="h-full">
+            </div>
+            <div class="col-span-6 lg:col-span-2 my-auto">
+                <div class="flex flex-col justify-center leading-10">
+                    <p class="text-[35px] font-bold text-[#E78200]">Get The <span class="text-[#4A4A4A]">Opay</span> <br>
+                        <span class="text-[#4A4A4A]">Bussiness</span> App Today!
+                    </p>
+                    <p class="py-6 text-[16px] leading-6 text-[#4A4A4A]">Make the best decision for your business and make handling your finances a seamless process.</p>
+                    <button class="rounded-full h-10 w-36 transition-colors duration-900 transform bg-[#E78200] hover:bg-[#F0A33F] text-white text-md hover:text-sm">
+                        <a href="getapp.html" class="">Get the app</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </Section>
+
+    <!-- Footer -->
+    <Footer id="footer-sec" class="section pt-16 lg:pt-32 pb-8 px-6 sm:px-6 md:px-8">
+        <div class="max-w-5xl mx-auto grid grid-cols-6">
+            <div class="col-span-6 lg:col-span-2 order-3 lg:order-1 mt-10 lg:mt-0">
+                <div class="flex flex-col gap-6 items-center sm:items-start">
+                    <div class="h-10 w-24">
+                        <img src="assets/images/opay logo.jpeg" alt="logo">
+                    </div>
+                    <p class="text-[#4A4A4A] font-thin text-sm tracking-0 text-center sm:text-start">Helping you track your finances,<br> with the
+                        ultimate
+                        financial <br> assistant.</p>
+                </div>
+            </div>
+            <div class="col-span-3 lg:col-span-2 flex justify-center order-2">
+                <ul class="flex flex-col gap-6">
+                    <li class="text-[#4A4A4A] font-bold">Quick Links</li>
+                    <li class="text-[#4A4A4A] font-thin text-sm"><a href="index.html">Home</a></li>
+                    <li class="text-[#4A4A4A] font-thin text-sm"><a href="getapp.html">Get the App</a></li>
+                    <li class="text-[#4A4A4A] font-thin text-sm"><a href="yourbusiness.html">For Business</a></li>
+                </ul>
+            </div>
+            <div class="col-span-3 lg:col-span-2 lg:text-end order-1 lg:order-3">
+                <ul class="flex flex-col gap-6">
+                    <li class="text-[#4A4A4A] font-bold">Contact Info</li>
+                    <li class="text-[#4A4A4A] font-thin text-sm"><a href="#">(+64) 228 822 160</a></li>
+                    <li class="text-[#4A4A4A] font-thin text-sm"><a href="#">contant@opay.co.nz</a></li>
+                    <li class="text-[#4A4A4A] font-thin text-sm"><a href="#">Wellington, New Zealand</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- socila media links -->
+        <div class="max-w-5xl mx-auto flex gap-6 py-10 justify-center sm:justify-start">
+            <a href="#" class="h-8 w-8">
+                <img src="assets/bxl_facebook-circle.svg" alt="facebook" class="h-full w-full">
+            </a>
+            <a href="#" class="h-8 w-8">
+                <img src="assets/ant-design_instagram-filled.svg" alt="instagram" class="h-full w-full">
+            </a>
+            <a href="#" class="h-8 w-8">
+                <img src="assets/entypo-social_linkedin-with-circle.svg" alt="linkedin" class="h-full w-full">
+            </a>
+        </div>
+
+        <div class="max-w-5xl mx-auto grid grid-cols-3">
+            <div class="col-span-3 sm:col-span-1 flex justify-center sm:justify-start">
+                <p class="uppercase text-[#4A4A4A] font-normal text-[10px]">All rights reserved</p>
+            </div>
+            <div class="col-span-3 sm:col-span-1 flex justify-center">
+                <p class="uppercase text-[#4A4A4A] font-normal text-[10px]"></p>
+            </div>
+            <div class="col-span-3 sm:col-span-1 flex justify-center sm:justify-end">
+                <p class="uppercase text-[#4A4A4A] font-normal text-[10px]">© 2022 Octal Payement Technologies Ltd</p>
+            </div>
+        </div>
+    </Footer>
+
+    <script>
+        // Select all links with hashes
+        $('a[href*="#"]')
+            // Remove links that don't actually link to anything
+            .not('[href="#"]')
+            .not('[href="#0"]')
+            .click(function (event) {
+                // On-page links
+                if (
+                    location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+                    &&
+                    location.hostname == this.hostname
+                ) {
+                    // Figure out element to scroll to
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    // Does a scroll target exist?
+                    if (target.length) {
+                        // Only prevent default if animation is actually gonna happen
+                        event.preventDefault();
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000, function () {
+                            // Callback after animation
+                            // Must change focus!
+                            var $target = $(target);
+                            $target.focus();
+                            if ($target.is(":focus")) { // Checking if the target was focused
+                                return false;
+                            } else {
+                                $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                                $target.focus(); // Set focus again
+                            };
+                        });
+                    }
+                }
+            });
+
+    </script>
+    <script>
+        function disappear(){
+            document.getElementById("mobile-menu").classList.toggle("hidden");
+        }
+    </script>
+</body>
+
+</html>
